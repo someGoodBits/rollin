@@ -4,7 +4,7 @@ let then = NaN;
 let size = 0;
 let offset = ((Math.atan2(5, 14) + Math.atan2(3, 14)) * 180) / Math.PI;
 let stop = false;
-let debugMode = true ;
+let debugMode = false ;
 
 function handleClick(){
     if (checkCollision()) {
@@ -28,6 +28,17 @@ function handleKey(e){
     e.preventDefault();
     if(e.key === " " || e.code=="Space" || e.keyCode == 32) {
         handleClick();
+    }
+    console.log(e.key);
+    if(e.key === "q" || e.code=="q" || e.keyCode == 32) {
+        if(debugMode){
+            log.style.display = "none" ;
+            debug.style.display = "none" ;
+        } else {
+            log.style.display = "block" ;
+            debug.style.display = "block" ;
+        }
+        debugMode = !debugMode ;
     }
 }
 
