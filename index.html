@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page">
+            <svg id="track" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200" cy="200" r="140" stroke-width="120"/>
+            </svg>
+            <svg id="target" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200" cy="200" r="140" stroke-width="100" />
+            </svg>
+            <svg id="player" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="340" cy="200" r="20"/>
+            </svg>
+            <svg id="log" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line id="l1" x1="200" y1="200" stroke="magenta"/>
+                <line id="l2" x1="200" y1="200" stroke="magenta"/>
+                <line id="l3" x1="200" y1="200" stroke="magenta"/>
+            </svg>
+            <div id="score">00</div>
+            <div id="gameOver" data-visible="false">
+                <div class="title">Game Over</div>
+                <p>Your score is</p>
+                <p id="highscore">0</p>
+                <button onclick="start()">Retry</button>
+            </div>
+        </div>
+        <div class="page" id="startScreen" data-visible="true">
+            <div class="title">Rollin'</div>
+            <div class="rules">
+                <h3>Rules</h3>
+                <p>Click the screen or press Space when the spinning dot is in white area. If you click when the dot is outside the white area game will be over</p>
+            </div>
+            <button class="btn" onclick="start()">START</button>
+        </div>
+    </div>
+    <div id="debug">
+        <div id="d1">0</div>
+        <div id="d2">0</div>
+        <div id="d3">0</div>
+        <div id="d9">0</div>
+        <div id="d4">0</div>
+        <div id="d5">0</div>
+        <div id="d6">0</div>
+        <div id="d7">0</div>
+        <div id="d8">0</div>
+    </div>
+</body>
+</html>
