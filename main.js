@@ -28,9 +28,7 @@ function handleKey(e){
     e.preventDefault();
     if(e.key === " " || e.code=="Space" || e.keyCode == 32) {
         handleClick();
-    }
-    console.log(e.key);
-    if(e.key === "q" || e.code=="q" || e.keyCode == 32) {
+    } else if(e.key === "q" || e.code=="q") {
         if(debugMode){
             log.style.display = "none" ;
             debug.style.display = "none" ;
